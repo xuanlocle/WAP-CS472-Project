@@ -42,13 +42,10 @@ function insertDefaultRows() {
         db.run(insertQuery, [word, popular], (err) => {
             if (err) {
                 console.error(`Error inserting word "${word}":`, err.message);
-            } else {
-                //do nothing
             }
         });
-        console.log(`Inserted default word "${word}" with popularity ${popular}`);
-
     });
+    console.log(`Inserted default popular words`);
 }
 
 export function incrementSearchCount(word, callback) {
