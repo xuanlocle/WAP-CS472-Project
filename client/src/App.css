@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: grey;
+  display: flex;
+  color: white;
+}
+
+
+.footer {
+  display: absolute;
+  background-color: #F5F5F1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+
+.footer h4:first-of-type {
+  float: left;
+}
+
+.footer h4:last-of-type {
+  float: right;
+  padding: 0px 40px;
+}
+
+.body-padding {
+  margin: 4px 100px 100px 100px;
+}
+
+.searchbar {
+  padding: 4px 10px;
+  background-color: #f5f5f5;
+}
+
+.headline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.split-row {
+  float: left;
+  width: 50%;
+}
+
+.top-padding {
+  margin-top: 60px;
+}
+
+.right {
+  float: right;
+}
+
+.primary {
+  background-color: #EA5421;
+  color: white;
+}
+
+.secondary {
+  background-color: #AEA79F;
+  color: white;
+}
+
+.btn {
+  padding: 10px 40px;
+  margin: 0px 4px;
+  border-radius: 4px;
+  border: none;
+}
