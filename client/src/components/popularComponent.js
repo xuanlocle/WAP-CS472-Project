@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { REACT_APP_DEFAULT_SERVER, REACT_APP_SERVER } from "../config";
+
+const HOST = REACT_APP_SERVER || REACT_APP_DEFAULT_SERVER
 
 export default function PopularComponent(props) {
     const { onPopularTermClick } = props;
@@ -26,9 +29,10 @@ export default function PopularComponent(props) {
         };
     }, []);
 
+
     const fetchPopularTerms = async () => {
         try {
-            const response = await fetch('http://localhost:3001/terms/popular');
+            const response = await fetch(`${HOST}/terms/popular`);
             if (!response.ok) {
                 throw new Error('Failed to fetch popular terms');
             }
@@ -60,10 +64,10 @@ export default function PopularComponent(props) {
                         role="button"
                         style={{ cursor: 'pointer' }}
                     >
-                        <a href="#" className="text-decoration-none">
+                        <Button variant="link" className="text-decoration-none ps-0 pt-0">
                             <strong>{(startIndex + index).toString().padStart(2, '0')}</strong>{' '}
                             <span className="text-primary">{term.word}</span>
-                        </a>
+                        </Button>
                     </li>
                 ))}
             </ul>
